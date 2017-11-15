@@ -1,22 +1,17 @@
 <!doctype html>
 <html lang="en">
- <style> 
- html {
-    background-image: url("images/lightmcq.gif");
-    background-size: 100% 100%;
-    background-position: center;
- 
- }
- </style>
-    <head>
-	    <meta charset="utf-8">
-	    <title>CPS_P4</title>
-	<style>
-  .redtext {
-         color: yellow;
-         font-size:200%;
-  }
-  .bluetext {
+<style> 
+html {
+    background-image: url("images/scarlett1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+
+.redtext {
+    color: yellow;
+    font-size:200%;
+}
+.bluetext {
           color: darkgrey;
           font-family: cursive;
           font-size:300%;
@@ -28,23 +23,63 @@
           color: lightgreen;
           font-size:300%;
   }
-  .align-left-bottom {
-          margin: 0;
-          bottom: 0;
-          transform: translate(-5px, 0); 
+.left-bottom {
+         margin:0;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 20%;
+         height: auto;
   }
-  
-	  </style>
-	</head>
-	<center><<body>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="csp_p4.html">CSP_P4</a>
-        <a href="https://scratch.mit.edu/projects/175717507/">The Best Scratch Project On the Market</a>
-        <b><a href="Santiago_Luis.aia">Santiago and Luis App</a></b>
-        <a href="https://repl.it/MqZQ/0">
-            <img target= "_blank" class= ".align-left-bottom" src="images/batman_gif.gif" height="250px"></a>
+.derektext {
+        color: red;
+   }
+.top-right {
+         margin:0;
+         position:absolute;
+         top:0;
+         right:0;
+         width:20%;
+         height:auto;
+}
+</style>
+<head>
+    <meta charset="utf-8">
+	<title>CPS_P4</title>
+	  
+	<script class= "derektext" type="text/javascript">
+tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=" "+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="csp_p4.html">CSP_P4</a>
+    <a href="https://scratch.mit.edu/projects/175717507/">The Best Scratch Project On the Market</a>
+    <a href="files/Santiago_Luis.aia">Santiago and Luis App</a>
+    <a href="https://repl.it/MqZQ/0">
+        <img class= "left-bottom" target= "_blank" src="images/batman_gif.gif" height="250px"></a>
+    <br><br><br><br><br><br><br><br>
+    <a href="files/LuisHangman.py" download>
+        <img class= "top-right" target= "_blank" src="images/holygrail.gif" height="15%"></a>
     <p class="redtext">Click on the link that says that Devon and I are the best... KACHOW</p1>
-    <p class="bluetext"><b> BATMAN = PYTHON STORY</p2></b>
-    </body></center>
+    <p class="bluetext"> BATMAN = PYTHON STORY</p>
+    </body>
 </html>
