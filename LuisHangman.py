@@ -2,7 +2,7 @@ from random import randint
 
 
 WORD_LIST = {
-    'rand_word_1': 'linguistic',
+    'rand_word_1': 'linguistic',    #This is the word list that I changed
     'rand_word_2': 'amphipneustic',
     'rand_word_3': 'hypocrite',
     'rand_word_4': 'orkney',
@@ -15,7 +15,7 @@ WORD_LIST = {
 }
 
 
-HANGMAN = (
+HANGMAN = (      #HANGMAN will print when the user either gets a guess wrong or when a user gets it right
     """
     x-------x
     """,
@@ -75,15 +75,15 @@ MAX = len(HANGMAN) - 1
 num = randint(1, 10)
 num_string = str(num)
 words = 'rand_word_{}'.format(num_string)
-WORD_TO_GUESS = WORD_LIST[words]
+WORD_TO_GUESS = WORD_LIST[words] #This sets the word equal to the word list that is chosen at random
 HIDDEN = ['_'] * len(WORD_TO_GUESS)
 LETTERS_GUESSED = []
 
 
 def begin_game():
-    hang_size = 0
-    print "\tHANGMAN!"
-    word_arr = list(WORD_TO_GUESS)
+    hang_size = 0 #the size grows with user input and will print the different types o
+    print "\tHANGMAN!" #prints the pic of the hangman that goes with the user input
+    word_arr = list(WORD_TO_GUESS) #
 
     while hang_size < MAX:
         print str(HIDDEN)
@@ -103,10 +103,10 @@ def begin_game():
                         print 'You win! Finally you did something right!'
                         quit()
 
-        else:
+        else:#this command always prints the following information and new hangman
             print "{}.. Really? That's the best you can do.. Not in my word..".format(user_guess)
             hang_size += 1
             print HANGMAN[hang_size]
 
 
-begin_game()
+begin_game() 
