@@ -12,50 +12,66 @@ html {
     font-size:200%;
 }
 .bluetext {
-          color: darkgrey;
-          font-family: cursive;
-          font-size:300%;
+    color: darkgrey;
+    font-family: cursive;
+    font-size:300%;
   }
-  .blacktext {
-          color: lightgreen;
+.blacktext {
+    color: lightgreen;
   }
 .greentext {
-          color: lightgreen;
-          font-size:300%;
+    color: lightgreen;
+    font-size:300%;
   }
 .left-bottom {
-         margin: 0;
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         width: 20%;
-         height: auto;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: auto;
   }
 .right-bottom {
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-        right :0;
-        width: 20%;
-        height: auto;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right :0;
+    width: 30%;
+    height: 30%;
   }
 .derektext {
-        color: red;
-   }
+    color: red;
+    font-family: arial;
+    font-size: 200%;
+}
 .top-right {
-         margin:0;
-         position:absolute;
-         top:0;
-         right:0;
-         width:20%;
-         height:auto;
+    margin:0;
+    position:absolute;
+    top:0;
+    right:0;
+    width:20%;
+    height:auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-image: url("https://www.medicalnewstoday.com/articles/319273.php");
+  padding: 50;
+}
+.grid-container > div {
+  background-color: rgba(255, 98, 52, 0.8);
+  border: 4px solid black;
+  text-align: center;
+  font-size: 100%;
 }
 </style>
 <head>
-    <meta charset="utf-8">
-	<title>CPS_P4</title>
+
+<meta charset="utf-8">
+<title>CPS_P4</title>
 	  
-	<script class= "derektext" type="text/javascript">
+<script class= "derektext" type="text/javascript">
 tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
@@ -73,24 +89,30 @@ GetClock();
 setInterval(GetClock,1000);
 }
 </script>
-<div id="clockbox" style="font:20pt; color:red;"></div>
+<div id="clockbox" style="font:200pt; color:red;"></div>
 </head>
 
 <body>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="csp_p4.html">CSP_P4</a>
-    <a href="https://scratch.mit.edu/projects/175717507/">The Best Scratch Project On the Market</a>
-    <a href="files/Santiago_Luis.aia">Santiago and Luis App</a>
-    <a href="https://repl.it/MqZQ/0">
-        <img class= "left-bottom" target= "_blank" src="images/turkeygif.gif" height="250px"></a>
-    <a href="files/LuisHangman.py" download>
-        <img class= "top-right" target="_blank" src="images/holygrail.gif" height="15%"></a>
-    <a href="files/artifact.pdf" download>
-         <img class="bottom" target="_blank" src="images/indiana.jpg" height="15%"></a>
-     <a href="files/responses.pdf">
-         <img class="right-bottom" target="_blank" src="images/wordimage.png" height="15%"></a>
-    <p class="redtext">Scratch Logo = Artifact. Word Image = Written Responses </p1>
-    <p class="bluetext"> BATMAN = PYTHON STORY</p>
-    </body>
+    <h1 class=>Projects</h1>
+
+<p>A Grid Container consists of grid items arranged in columns and rows</p>
+
+<div class="grid-container">
+  <div><a href="https://scratch.mit.edu/projects/175717507/">Scratch Project</a></div>
+  <div><a href="files/Santiago_Luis.aia" class="bluetext">Santiago and Luis App</a></div>
+  <div><a href="https://repl.it/MqZQ/0">Repl.it</a></div>  
+  <div><a href="files/artifact.pdf" download>Artifact</a></div>
+  <div><a href="files/LuisHangman.py" download>Hangman File</a></div>
+  <div><a href="files/responses.pdf" download>Responses</a></div>
+  <div><a href="files/create_task2.pdf" download> CReate Task 2 Responses</a></div>
+  <div>8</div>
+</div>
+    <div><div class="redtext">
+        <a target="_self" href="/my_website_files/index.html">Home</a></div>
+    <div class="redtext">
+        <a target="_self" href="/my_website_files/portfolio.html">Portfolio</a></div>
+    <div class="redtext">
+        <a href="/my_website_files/csp_p4.html" color="neon">CSP_4</a></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gs069dndIYk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></body>
 </html>
